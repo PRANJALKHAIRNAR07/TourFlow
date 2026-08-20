@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TourFlow | Authority Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        TourFlow
+    </div>
+
+    <nav>
+        <a href="/">Tourist</a>
+        <a href="/dashboard">Authority Dashboard</a>
+    </nav>
+
+</header>
+
+
+<main class="dashboard">
+
+    <section class="dashboard-header">
+
+        <p class="tag">
+            TOURISM AUTHORITY
+        </p>
+
+        <h1>
+            Visitor Flow Dashboard
+        </h1>
+
+        <p>
+            Monitor destination capacity and identify
+            peak visitor periods.
+        </p>
+
+    </section>
+
+
+    <section class="dashboard-grid">
+
+        {% for destination in destinations %}
+
+        <div class="dashboard-card">
+
+            <h2>
+                {{ destination.name }}
+            </h2>
+
+            <div class="metric">
+
+                <span>
+                    Capacity
+                </span>
+
+                <strong>
+                    {{ destination.capacity }}
+                </strong>
+
+            </div>
+
+
+            <div class="metric">
+
+                <span>
+                    Peak Time
+                </span>
+
+                <strong>
+                    {{ destination.peak_slot }}
+                </strong>
+
+            </div>
+
+
+            <div class="metric">
+
+                <span>
+                    Peak Visitors
+                </span>
+
+                <strong>
+                    {{ destination.peak_visitors }}
+                </strong>
+
+            </div>
+
+
+            <div class="crowd-bar">
+
+                <div
+                    class="crowd-fill"
+                    style="width: {{ [destination.peak_utilization, 100] | min }}%"
+                >
+                </div>
+
+            </div>
+
+
+            <p class="utilization">
+
+                Peak capacity utilization:
+                <strong>
+                    {{ destination.peak_utilization }}%
+                </strong>
+
+            </p>
+
+        </div>
+
+        {% endfor %}
+
+    </section>
+
+
+    <section class="dashboard-info">
+
+        <h2>
+            Management Insight
+        </h2>
+
+        <p>
+            TourFlow identifies periods where expected visitor
+            demand approaches or exceeds destination capacity.
+            Authorities can use this information to encourage
+            visitors toward less crowded time slots.
+        </p>
+
+    </section>
+
+</main>
+
+</body>
+
+</html>
