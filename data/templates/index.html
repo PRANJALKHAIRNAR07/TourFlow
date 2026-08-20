@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TourFlow | Smart Tourist Scheduling</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        TourFlow
+    </div>
+
+    <nav>
+        <a href="/">Tourist</a>
+        <a href="/dashboard">Authority Dashboard</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+    <div>
+
+        <p class="tag">
+            SMART TOURISM • CROWD MANAGEMENT
+        </p>
+
+        <h1>
+            Visit smarter.<br>
+            Avoid the crowd.
+        </h1>
+
+        <p class="hero-text">
+            TourFlow recommends suitable visiting time slots
+            based on destination capacity and expected visitor demand.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="booking-section">
+
+    <div class="card">
+
+        <h2>Plan Your Visit</h2>
+
+        <p class="section-description">
+            Enter your preferences and let TourFlow recommend
+            a less congested time slot.
+        </p>
+
+
+        <form id="recommendForm">
+
+            <label for="destination">
+                Destination
+            </label>
+
+            <select id="destination" required>
+
+                <option value="">
+                    Select destination
+                </option>
+
+                {% for destination in destinations %}
+
+                <option value="{{ destination.id }}">
+                    {{ destination.name }}
+                </option>
+
+                {% endfor %}
+
+            </select>
+
+
+            <label for="date">
+                Visit Date
+            </label>
+
+            <input
+                type="date"
+                id="date"
+                required
+            >
+
+
+            <label for="preferred_time">
+                Preferred Time
+            </label>
+
+            <select id="preferred_time">
+
+                <option value="">
+                    Select preferred time
+                </option>
+
+                <option value="09:00">09:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="16:00">04:00 PM</option>
+
+            </select>
+
+
+            <button type="submit">
+                Find Best Time Slot
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div
+        id="result"
+        class="card result-card hidden"
+    >
+
+        <h2>TourFlow Recommendation</h2>
+
+        <div id="resultContent"></div>
+
+    </div>
+
+</section>
+
+
+<section class="concept">
+
+    <h2>How TourFlow Works</h2>
+
+    <div class="steps">
+
+        <div class="step">
+            <span>1</span>
+            <h3>Select</h3>
+            <p>
+                Choose destination, date and preferred time.
+            </p>
+        </div>
+
+        <div class="step">
+            <span>2</span>
+            <h3>Analyze</h3>
+            <p>
+                TourFlow evaluates expected demand and capacity.
+            </p>
+        </div>
+
+        <div class="step">
+            <span>3</span>
+            <h3>Recommend</h3>
+            <p>
+                The system recommends a suitable time slot.
+            </p>
+        </div>
+
+        <div class="step">
+            <span>4</span>
+            <h3>Distribute</h3>
+            <p>
+                Visitors are distributed across less crowded periods.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
