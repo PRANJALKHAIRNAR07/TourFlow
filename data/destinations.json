@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "name": "Heritage Fort",
+        "location": "Pune",
+        "capacity": 1000,
+        "description": "A popular heritage destination used for demonstrating smart tourist scheduling.",
+        "time_slots": {
+            "09:00": 450,
+            "10:00": 850,
+            "11:00": 1450,
+            "12:00": 1250,
+            "13:00": 800,
+            "14:00": 650,
+            "15:00": 550,
+            "16:00": 700
+        }
+    },
+    {
+        "id": 2,
+        "name": "City Museum",
+        "location": "Pune",
+        "capacity": 700,
+        "description": "A cultural attraction used as an alternative destination in the demonstration.",
+        "time_slots": {
+            "09:00": 250,
+            "10:00": 400,
+            "11:00": 650,
+            "12:00": 600,
+            "13:00": 450,
+            "14:00": 350,
+            "15:00": 300,
+            "16:00": 500
+        }
+    },
+    {
+        "id": 3,
+        "name": "Nature Park",
+        "location": "Pune",
+        "capacity": 900,
+        "description": "A nearby recreational attraction with different visitor demand patterns.",
+        "time_slots": {
+            "09:00": 300,
+            "10:00": 500,
+            "11:00": 700,
+            "12:00": 850,
+            "13:00": 600,
+            "14:00": 450,
+            "15:00": 350,
+            "16:00": 400
+        }
+    }
+]
