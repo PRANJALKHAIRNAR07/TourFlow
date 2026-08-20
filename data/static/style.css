@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+.navbar {
+    height: 70px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: #2563eb;
+}
+
+main {
+    width: 84%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero {
+    margin-top: 45px;
+    background: white;
+    border-radius: 20px;
+    padding: 60px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.tag {
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin: 15px 0;
+}
+
+.hero-text {
+    max-width: 650px;
+    color: #6b7280;
+    font-size: 18px;
+}
+
+.booking-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.section-description {
+    color: #6b7280;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+select,
+input {
+    padding: 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 14px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.hidden {
+    display: none;
+}
+
+.result-card {
+    border-left: 5px solid #2563eb;
+}
+
+.recommendation {
+    margin-top: 20px;
+    padding: 20px;
+    background: #eff6ff;
+    border-radius: 12px;
+}
+
+.recommendation h3 {
+    color: #2563eb;
+    font-size: 24px;
+}
+
+.crowd-high {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.crowd-medium {
+    color: #d97706;
+    font-weight: bold;
+}
+
+.crowd-low {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.slot-list {
+    margin-top: 20px;
+}
+
+.slot {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.concept {
+    margin: 50px 0;
+}
+
+.concept h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.step span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+}
+
+.step h3 {
+    margin: 12px 0 5px;
+}
+
+.step p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.dashboard {
+    padding-top: 45px;
+}
+
+.dashboard-header {
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    font-size: 40px;
+    margin: 8px 0;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.metric {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.metric span {
+    color: #6b7280;
+}
+
+.crowd-bar {
+    height: 12px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.crowd-fill {
+    height: 100%;
+    background: #2563eb;
+    border-radius: 10px;
+}
+
+.utilization {
+    margin-top: 10px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.dashboard-info {
+    margin-top: 30px;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+}
+
+@media (max-width: 800px) {
+
+    .booking-section {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 35px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    main {
+        width: 92%;
+    }
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .navbar nav {
+        gap: 10px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+}
